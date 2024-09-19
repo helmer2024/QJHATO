@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Detalles del Producto</h1>
+    </header>
+
+    <section class="producto-detalle">
+        <img src="{{ url_for('static', filename='img/' + producto['imagen']) }}" alt="{{ producto['nombre'] }}">
+        <h2>{{ producto['nombre'] }}</h2>
+        <p>{{ producto['descripcion'] }}</p>
+        <p>Precio: ${{ producto['precio'] }}</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Virtual</p>
+    </footer>
+</body>
+</html>
